@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gym Management System</title>
+  <link rel="stylesheet" href="/gym management/css/index.css" />
+  <script type="module" src="/gym management/js/index.js"></script>
+</head>
+<body>
+  <!-- Hero Banner -->
+  <div class="hero-section">
+    <h1>Welcome to Gym Management System</h1>
+    <p>Track members, manage billing, send notifications, and more.</p>
+    <img src="/gym management/images/gym-home-banner.jpg" alt="Gym Banner" class="banner-image">
+  </div>
+
+  <!-- Feature Images Section -->
+  <div class="image-gallery">
+    <img src="/gym management/images/motivation1.jpg" alt="Motivation 1">
+    <img src="/gym management/images/workout.jpg" alt="Workout">
+    <img src="/gym management/images/supplements.jpg" alt="Supplements">
+  </div>
+
+  <!-- Login Tabs -->
+  <div class="login-tabs">
+    <button class="tablink" onclick="openLogin(event, 'AdminLogin')">Admin</button>
+    <button class="tablink" onclick="openLogin(event, 'MemberLogin')">Member</button>
+    <button class="tablink" onclick="openLogin(event, 'UserLogin')">User</button>
+  </div>
+
+  <!-- Login Forms -->
+  <div id="AdminLogin" class="login-form">
+    <h2>Admin Login</h2>
+    <input type="email" id="adminEmail" placeholder="Email" />
+    <input type="password" id="adminPassword" placeholder="Password" />
+    <button onclick="login('admin')">Login</button>
+  </div>
+
+  <div id="MemberLogin" class="login-form" style="display:none">
+    <h2>Member Login</h2>
+    <input type="email" id="memberEmail" placeholder="Email" />
+    <input type="password" id="memberPassword" placeholder="Password" />
+    <button onclick="login('member')">Login</button>
+  </div>
+
+  <div id="UserLogin" class="login-form" style="display:none">
+    <h2>User Login</h2>
+    <input type="email" id="userEmail" placeholder="Email" />
+    <input type="password" id="userPassword" placeholder="Password" />
+    <button onclick="login('user')">Login</button>
+  </div>
+</body>
+</html>
+ 

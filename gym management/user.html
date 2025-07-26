@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/gym management/css/user.css" />
+  
+  <!-- JS Scripts -->
+  <script type="module" src="/gym management/js/user.js"></script>
+</head>
+
+<body>
+  <div class="user-header">
+    <img src="/gym management/images/dashboard-ui.jpg" alt="User Panel Banner" class="header-img" />
+    <h1>Welcome to the Gym Portal</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="user-container">
+    <!-- Fee Packages -->
+    <section>
+      <h2>Gym Fee Packages</h2>
+      <ul id="packageList">
+        <li>Monthly – ₹1,499</li>
+        <li>Quarterly – ₹2,599</li>
+        <li>Yearly – ₹10,999</li>
+      </ul>
+    </section>
+
+    <!-- Search Records -->
+    <section class="search-section">
+      <h2>Search Records</h2>
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchBox"
+          class="search-input"
+          placeholder="Search by email..."
+        />
+        <button class="search-btn" onclick="searchMember()">Search</button>
+      </div>
+      <div id="searchResult" class="result-box"></div>
+    </section>
+  </div>
+</body>
+</html>

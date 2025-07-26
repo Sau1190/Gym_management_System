@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/gym management/css/admin.css" />
+
+  <!-- Firebase App Initialization & Dashboard Logic (Modular) -->
+  <script type="module" src="/gym management/js/dashboard.js" defer></script>
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Admin Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+
+    <!-- Add Member -->
+    <section>
+      <h2>Add Member</h2>
+      <input id="memberName" placeholder="Full Name" />
+      <input id="memberEmail" placeholder="Email" />
+      <input id="memberPackage" placeholder="Package (e.g. Monthly)" />
+      <button onclick="addMember()">Add Member</button>
+    </section>
+
+    <!-- Update/Delete Members -->
+    <section>
+      <h2>Manage Members</h2>
+      <input id="searchEmail" placeholder="Member Email" />
+      <button onclick="loadMember()">Search</button>
+      <div id="memberInfo" style="margin-top:10px;"></div>
+    </section>
+
+    <!-- Generate Bill -->
+    <section>
+      <h2>Generate Bill</h2>
+      <input id="billEmail" placeholder="Member Email" />
+      <input id="billAmount" placeholder="Amount ₹" />
+      <input id="billDate" type="date" />
+      <button onclick="generateBill()">Create Bill</button>
+    </section>
+
+    <!-- Assign Fee Package -->
+    <section>
+      <h2>Assign Fee Package</h2>
+      <input id="feeEmail" placeholder="Member Email" />
+      <select id="feePackage">
+        <option value="Monthly">Monthly</option>
+        <option value="Quarterly">Quarterly</option>
+        <option value="Half-Yearly">Half-Yearly</option>
+        <option value="Yearly">Yearly</option>
+      </select>
+      <button onclick="assignFeePackage()">Assign Package</button>
+    </section>
+
+    <!-- Assign Monthly Notification -->
+    <section>
+      <h2>Send Notification</h2>
+      <input id="notifyEmail" placeholder="Member Email" />
+      <input id="notifyMessage" placeholder="Enter Message" />
+      <button onclick="sendNotification()">Send</button>
+    </section>
+
+    <!-- Export Reports -->
+    <section>
+      <h2>Export Reports</h2>
+      <button onclick="exportReports()">Export Member Data</button>
+    </section>
+
+    <!-- Supplement Store -->
+    <section>
+      <h2>Supplement Store</h2>
+      <input id="supplementName" placeholder="Product Name" />
+      <input id="supplementPrice" placeholder="Price ₹" />
+      <button onclick="addSupplement()">Add Product</button>
+    </section>
+
+    <!-- Diet Plans -->
+    <section>
+      <h2>Diet Details</h2>
+      <input id="dietEmail" placeholder="Member Email" />
+      <textarea id="dietPlan" placeholder="Enter Diet Plan..."></textarea>
+      <button onclick="assignDiet()">Assign Diet</button>
+    </section>
+
+    <div id="statusMsg"></div>
+  </div>
+</body>
+</html>

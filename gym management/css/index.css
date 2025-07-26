@@ -1,0 +1,185 @@
+/* Reset and Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0d47a1, #083b88);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Hero Banner */
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0b3c86;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+.banner-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 25px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease-in-out;
+}
+
+.banner-image:hover {
+  transform: scale(1.03);
+}
+
+/* Login Tabs */
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #0a3a7b;
+  padding: 15px 0;
+  flex-wrap: wrap;
+  animation: slideDown 1s ease-in-out;
+}
+
+.tablink {
+  background-color: white;
+  color: #0d47a1;
+  border: none;
+  padding: 14px 22px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.tablink:hover {
+  background-color: #e3f2fd;
+  transform: translateY(-2px);
+}
+
+/* Login Form */
+.login-form {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: none;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.login-form input {
+  width: 90%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 8px #0d47a180;
+  outline: none;
+}
+
+.login-form button {
+  background-color: #0d47a1;
+  color: white;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.login-form button:hover {
+  background-color: #083b88;
+}
+
+.login-form button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 12px #0052cc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-tabs {
+    flex-direction: column;
+  }
+
+  .tablink {
+    width: 90%;
+    margin: 8px 0;
+  }
+
+  .login-form {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+  background: #e3f2fd;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.image-gallery img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
