@@ -9,4 +9,7 @@ To reduce manual tasks and improve user convenience.
 
 
 **Tools used to built it :** 
-  HTML, CSS, JavaScript, and Firebase ( for database purpose ) 
+* HTML
+* CSS
+* JavaScript
+* Firebase ( for database purpose ) 
