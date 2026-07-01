@@ -4,7 +4,7 @@
 * It helps gym owners manage members, payments, diet plans, and notifications efficiently. 
 
 
-**Project Aim**
+**Project Aim :**
 To reduce manual tasks and improve user convenience.
 
 
