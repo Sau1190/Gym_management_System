@@ -14,7 +14,7 @@ To reduce manual tasks and improve user convenience.
 * HTML
 * CSS
 * JavaScript
-* Firebase ( for database purpose ) 
+* Firebase ( for database purpose )
 
 
 
