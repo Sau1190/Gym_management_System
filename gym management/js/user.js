@@ -9,14 +9,19 @@ import {
   get
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
+
 // ✅ Check if user is authenticated
+
 onAuthStateChanged(auth, (user) => {
   if (!user) {
     window.location.href = "/gym management/index.html"; // Or login page
   }
 });
 
+
 // ✅ Logout function
+
+
 window.logout = function () {
   signOut(auth)
     .then(() => {
@@ -27,7 +32,9 @@ window.logout = function () {
     });
 };
 
+
 // ✅ Search by member email
+
 window.searchMember = function () {
   const email = document.getElementById("searchBox").value.trim();
   const membersRef = ref(database, "members");
