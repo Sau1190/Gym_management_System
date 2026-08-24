@@ -12,6 +12,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
 // Auth check
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     loadBills(user.email);
@@ -23,6 +24,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 // Load Bills
+
 function loadBills(email) {
   const billRef = query(ref(database, "bills"), orderByChild("email"), equalTo(email));
   onValue(billRef, (snapshot) => {
@@ -43,6 +45,7 @@ function loadBills(email) {
 }
 
 // Load Notifications
+
 function loadNotifications(email) {
   const notifyRef = query(ref(database, "notifications"), orderByChild("email"), equalTo(email));
   onValue(notifyRef, (snapshot) => {
@@ -63,6 +66,7 @@ function loadNotifications(email) {
 }
 
 // Logout
+
 window.logout = function () {
   signOut(auth)
     .then(() => {
