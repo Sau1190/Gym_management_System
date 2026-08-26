@@ -1,4 +1,5 @@
 // ✅ Firebase Modular SDK Imports
+
 import {
   getAuth,
   onAuthStateChanged,
@@ -17,6 +18,7 @@ import {
 import { auth, database } from "/gym management/js/firebase-config.js";
 
 // ✅ Auth check
+
 onAuthStateChanged(auth, function(user) {
   if (!user) {
     alert("Unauthorized access.");
@@ -25,6 +27,7 @@ onAuthStateChanged(auth, function(user) {
 });
 
 // ✅ Add New Member
+
 window.addMember = function () {
   const name = document.getElementById("memberName").value.trim();
   const email = document.getElementById("memberEmail").value.trim();
@@ -44,6 +47,7 @@ window.addMember = function () {
 };
 
 // ✅ Load Member by Email
+
 window.loadMember = function () {
   const email = document.getElementById("searchEmail").value.trim();
   if (!email) return showStatus("Please enter email to search.");
@@ -67,6 +71,7 @@ window.loadMember = function () {
 };
 
 // ✅ Update Member
+
 window.updateMember = function (key) {
   const name = document.getElementById("editName").value.trim();
   const packageType = document.getElementById("editPackage").value;
@@ -79,6 +84,7 @@ window.updateMember = function (key) {
 };
 
 // ✅ Delete Member
+
 window.deleteMember = function (key) {
   remove(ref(database, "members/" + key))
     .then(() => {
@@ -89,6 +95,7 @@ window.deleteMember = function (key) {
 };
 
 // ✅ Generate Bill
+
 window.generateBill = function () {
   const email = document.getElementById("billEmail").value.trim();
   const amount = document.getElementById("billAmount").value;
@@ -108,6 +115,7 @@ window.generateBill = function () {
 };
 
 // ✅ Assign Fee Package
+
 window.assignFeePackage = function () {
   const email = document.getElementById("feeEmail").value.trim();
   const selectedPackage = document.getElementById("feePackage").value;
@@ -130,6 +138,7 @@ window.assignFeePackage = function () {
 };
 
 // ✅ Send Notification
+
 window.sendNotification = function () {
   const email = document.getElementById("notifyEmail").value.trim();
   const message = document.getElementById("notifyMessage").value.trim();
@@ -147,6 +156,7 @@ window.sendNotification = function () {
 };
 
 // ✅ Export Member Report
+
 window.exportReports = function () {
   get(ref(database, "members")).then(snapshot => {
     let csv = "Name,Email,Package,JoinedOn\n";
@@ -165,6 +175,7 @@ window.exportReports = function () {
 };
 
 // ✅ Add Supplement
+
 window.addSupplement = function () {
   const name = document.getElementById("supplementName").value.trim();
   const price = document.getElementById("supplementPrice").value;
@@ -182,6 +193,7 @@ window.addSupplement = function () {
 };
 
 // ✅ Assign Diet Plan
+
 window.assignDiet = function () {
   const email = document.getElementById("dietEmail").value.trim();
   const plan = document.getElementById("dietPlan").value.trim();
@@ -199,6 +211,7 @@ window.assignDiet = function () {
 };
 
 // ✅ Logout
+
 window.logout = function () {
   signOut(auth).then(() => {
     window.location.href = "/gym management/index.html";
@@ -206,6 +219,7 @@ window.logout = function () {
 };
 
 // ✅ Show Status
+
 function showStatus(msg) {
   const el = document.getElementById("statusMsg");
   el.innerText = msg;
@@ -214,6 +228,7 @@ function showStatus(msg) {
 }
 
 // ✅ Log Admin Actions
+
 function logAction(user, action, module) {
   push(ref(database, "logs"), {
     user,
