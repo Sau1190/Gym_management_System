@@ -1,13 +1,16 @@
 // ✅ Import Firebase auth from your firebase-config file
+
 import { auth } from "./firebase-config.js";
 
 // ✅ Import Firebase Auth methods
+
 import {
   signInWithEmailAndPassword,
   signOut
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 // ✅ Show the selected login form and hide others
+
 window.openLogin = function (evt, loginType) {
   const forms = document.querySelectorAll(".login-form");
   forms.forEach(form => (form.style.display = "none"));
@@ -19,6 +22,7 @@ window.openLogin = function (evt, loginType) {
 };
 
 // ✅ Role-based login logic
+
 window.login = function (role) {
   const email = document.getElementById(`${role}Email`)?.value.trim();
   const password = document.getElementById(`${role}Password`)?.value.trim();
@@ -39,6 +43,7 @@ window.login = function (role) {
 };
 
 // ✅ Logout logic
+
 window.logout = function () {
   signOut(auth)
     .then(() => {
@@ -51,11 +56,13 @@ window.logout = function () {
 };
 
 // ✅ Capitalize first letter (for alert)
+
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 // ✅ Redirect users to correct dashboard
+
 function redirectToDashboard(role) {
   const basePath = "/gym management";
   switch (role) {
