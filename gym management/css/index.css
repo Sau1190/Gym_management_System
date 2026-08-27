@@ -1,4 +1,5 @@
 /* Reset and Base */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,6 +9,7 @@ body {
 }
 
 /* Hero Banner */
+
 .hero-section {
   text-align: center;
   padding: 50px 20px;
@@ -41,6 +43,7 @@ body {
 }
 
 /* Login Tabs */
+
 .login-tabs {
   display: flex;
   justify-content: center;
@@ -70,6 +73,7 @@ body {
 }
 
 /* Login Form */
+
 .login-form {
   max-width: 400px;
   margin: 40px auto;
@@ -121,6 +125,7 @@ body {
 }
 
 /* Animations */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -137,6 +142,7 @@ body {
 }
 
 /* Responsive */
+
 @media (max-width: 480px) {
   .login-tabs {
     flex-direction: column;
