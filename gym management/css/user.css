@@ -1,6 +1,7 @@
 /* user.css - Final Enhanced Version */
 
 /* ========= THEME VARIABLES ========= */
+
 :root {
   --bg-gradient: linear-gradient(135deg, #ffe6e6, #cce2ff);
   --container-bg: #ffffff;
@@ -15,6 +16,7 @@
 }
 
 /* ========= BODY & GLOBAL ========= */
+
 body {
   font-family: "Poppins", sans-serif;
   background: var(--bg-gradient);
@@ -30,6 +32,7 @@ body {
 }
 
 /* ========= CONTAINER ========= */
+
 .user-container {
   max-width: 960px;
   margin: 60px auto;
@@ -47,6 +50,7 @@ body {
 }
 
 /* ========= HEADER ========= */
+
 .user-header {
   text-align: center;
   margin-bottom: 30px;
@@ -68,6 +72,7 @@ body {
 }
 
 /* ========= TITLES ========= */
+
 h1 {
   font-size: 2.5rem;
   color: var(--accent-hover);
@@ -104,6 +109,7 @@ section h2::after {
 }
 
 /* ========= SEARCH INPUT ========= */
+
 .search-input {
   width: 100%;
   padding: 14px 18px;
@@ -127,6 +133,7 @@ section h2::after {
 }
 
 /* ========= SEARCH BUTTON ========= */
+
 .search-btn {
   background: linear-gradient(135deg, var(--accent-light), #a78bfa);
   color: #fff;
@@ -147,6 +154,7 @@ section h2::after {
 }
 
 /* ========= LOGOUT BUTTON ========= */
+
 .logout-btn {
   background: linear-gradient(135deg, #ef4444, #f87171);
   color: white;
@@ -167,6 +175,7 @@ section h2::after {
 }
 
 /* ========= RESULT BOX ========= */
+
 .result-box {
   background: linear-gradient(145deg, #f3f4f6, #e0f2fe);
   padding: 20px 25px;
@@ -191,6 +200,7 @@ section h2::after {
 }
 
 /* ========= MEDIA QUERIES ========= */
+
 @media (max-width: 768px) {
   .user-container {
     padding: 25px;
