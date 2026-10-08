@@ -5,6 +5,7 @@ import {
   onAuthStateChanged,
   signOut
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
 import {
   getDatabase,
   ref,
@@ -15,6 +16,7 @@ import {
   get,
   child
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+
 import { auth, database } from "/gym management/js/firebase-config.js";
 
 // ✅ Auth check
