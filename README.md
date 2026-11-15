@@ -1,16 +1,15 @@
-# Gym_management_System
+# Gym Management System
 
-* The Gym Management System is a web-based application.
-* It helps gym owners manage members, payments, diet plans, and notifications efficiently. 
+A web-based application designed to automate manual gym operations and enhance the overall user experience.
 
-**Project Aim :** To reduce manual tasks and improve user convenience.
+**Key Features:**
 
-**Tools used to built it :** 
-* HTML
-* CSS
-* JavaScript
-* Firebase ( for database purpose )
+* Manage member profiles and subscriptions.
+* Track and process payments securely.
+* Assign personalized diet plans.
+* Send automated user notifications.
 
+**Tech Stack:**
 
-
-
+* **Frontend:** HTML, CSS, JavaScript
+* **Database:** Firebase
