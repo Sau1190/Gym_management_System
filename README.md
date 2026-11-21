@@ -1,15 +1,19 @@
+**Professional (Resume / Portfolio)**
+
 # Gym Management System
 
-A web-based application designed to automate manual gym operations and enhance the overall user experience.
+Web application automating gym workflows and streamlining member management.
 
-**Key Features:**
+* **Features:** Member profiles, secure payment tracking, custom diet plans, and automated alerts.
+* **Stack:** HTML, CSS, JavaScript, Firebase.
 
-* Manage member profiles and subscriptions.
-* Track and process payments securely.
-* Assign personalized diet plans.
-* Send automated user notifications.
+---
 
-**Tech Stack:**
+**Modern & Punchy (GitHub / Pitch)**
 
-* **Frontend:** HTML, CSS, JavaScript
-* **Database:** Firebase
+# Gym Management System
+
+All-in-one platform that digitizes gym operations and upgrades the member experience.
+
+* **Highlights:** Membership & billing management, tailored diet plans, and instant notifications.
+* **Built with:** HTML, CSS, JavaScript, and Firebase.
